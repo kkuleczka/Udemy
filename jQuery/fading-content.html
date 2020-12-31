@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-2.2.0.js"></script>
+
+        <style>
+            }
+            #hidden{
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p id="firstWay">Tekst do ukrycia i pokazania I sposób</p>
+        <button id="toggleI" type="toggle" >Switch I text</button>
+
+        <p id="secondWay">Tekst do ukrycia i pokazania II sposób</p>
+        <button id="toggleII">Switch II text</button>
+        
+        <script type="text/javascript">
+        
+        $("#toggleI").click(function(){
+            $("#firstWay").toggle("slow");
+        });
+        
+        
+        var text = true;
+        $("#toggleII").click(function() {
+            if (text) {
+                $("#secondWay").fadeOut(function() {
+                    text = false;
+                });
+            } 
+            else {
+                $("#secondWay").fadeIn(function() {
+                    text = true;
+                });
+            }
+
+        });
+        console.log(text);
+        
+        </script>
+
+
+    </body> 
+
+
+</html>

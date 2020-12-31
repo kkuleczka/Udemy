@@ -1,0 +1,50 @@
+#shape{
+    width: 200px;
+    height: 200px;
+    background-color: #ff0000;
+    display: none;
+    position: relative;
+    border-radius: 50% ;
+    color: rgb(194, 61, 61);
+}
+#timeSummary{
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    border: rgb(44, 44, 44) solid 1px;
+    padding: 0px 3px;
+}
+#startButton{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+.middleScreenInfoText{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    padding: 0px 3px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 2px;
+}
+.midleText{
+    font-size: 22px;
+}
+#count{
+    font-size: 20px;
+    margin: 1px;
+}
+#timeInfos{
+    border: rgb(44, 44, 44) solid 1px;
+    width: 260px;
+    top: 13px;          
+}

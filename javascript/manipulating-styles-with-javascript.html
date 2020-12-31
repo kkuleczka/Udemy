@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <p id="text">Hello World</p>
+        <button id="myButton">Change text</button>
+        <p id="secondParagraph">Java script is....</p>
+        <button id="secondButton">awesome!</button>
+        <p id="ThirdParagraph">Java script is shit</p>
+        <button id="ThirdButton">What do You Think?</button>
+        <p id="empty"></p>
+        <button id="FourthButton">Why its empty</button>
+        <p id="moreText">More text to style</p>
+        <button id="styleText">Style Text</button>
+
+        <script type="text/javascript">
+            document.getElementById("myButton").onclick = function() {
+                document.getElementById("text").innerHTML = "Hello Rob";
+            }
+            document.getElementById("secondButton").onclick = function() {
+                document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + "awesome!";
+            }
+            document.getElementById("ThirdButton").onclick = function() {
+                document.getElementById("ThirdParagraph").innerHTML = "I think " + document.getElementById("ThirdParagraph").innerHTML + " to";
+            }
+            document.getElementById("FourthButton").onclick=function() {
+                document.getElementById("empty").innerHTML="Because it is! Moron ";
+            }
+            document.getElementById("styleText").onclick=function(){
+                document.getElementById("moreText").style.color="red" ;
+                document.getElementById("moreText").style.fontSize="50px";
+                //document.getElementById("moreText").style.display="none";            
+                }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,247 @@
+#topbar{
+    width: 1000px;
+    height: 40px;
+    margin:0 auto;
+    /* background-color: green; */
+}
+body{
+    margin:0;
+    padding: 0%;
+    font-family: Helvetica,Arial,sans-serif;
+    
+}
+#logo{
+    margin: 8px;
+    float: left;
+}
+.topbar-section{
+    border-left: 1px rgb(199, 200, 201) solid;
+    height: 100%;
+    float: left;
+}
+#signimage{
+    width: 24px;
+    margin: 11px 15px;
+    float: left;
+    }
+#sign-text{
+    font-weight: bold;
+    font-size: 90%;
+    position: relative;
+    top: 12px;
+    padding-right: 40px;
+}
+#bellimage{
+    height: 24px;
+    float: left;
+    margin: 11px 12px 0px 11px;
+    } 
+#wigglyline{
+    height: 40px;
+    float: left;
+}
+.topbar-buttons{
+    font-weight: bold;
+    font-size: 90%;
+    padding: 12px 20px;
+    height: 16px;
+}
+#more-arrow{
+    height: 11px;
+    margin-left: 5px;
+}
+#search-box{
+    width: 150px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    font-weight: bold;
+    font-size: 90%;
+    padding: 3px;
+    margin: 10px 0px 5px 6px;
+    float: left;
+   
+}
+#magnifying-glass{
+    height: 22px;
+    margin-top: 10px;
+    
+}
+.clear{
+    clear: both;;
+}
+#menue-bar-container{
+    background-color: rgb(194, 18, 18);
+    height: 70px;
+    width: 100%;
+}
+#menu-bar{
+    width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    padding: 0px;
+    padding-top: 10px;
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    float: left;
+}
+
+#menue-bar-right-item{
+    border: 1px rgb(194, 194, 194) solid;
+    float: right;
+    padding: 3px 7px 3px 10px;
+    margin: 7px 0px;
+}
+#menue-bar-right-item a{
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+#menue-bar-right-item a:hover{
+    text-decoration: underline;
+}
+#menue-bar-right-item img{
+    height: 40px;
+    margin-top: 3px;
+}
+#menue-bar-container-2{
+    background-color:#A91717;
+    height: 45px;
+    width: 100%;
+}
+#menue-bar-2{
+    width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+}
+#menue-bar-2 a{
+    color: white;
+    padding: 0px 7px;
+    position: relative;
+    top: 13px;
+    border-right: 1px #BB4545 solid;
+    text-decoration: none;
+    font-size: 16px;
+}
+#menue-bar-2 a:hover{
+    text-decoration: underline;
+}
+#menue-bar-2 img{
+    height: 14px;
+    position: relative;
+    top: 14px;
+}
+.no-border{
+    border: none !important;
+}
+.page-container{
+    width: 1000px;
+
+    margin: 0 auto;
+}
+h2{
+    margin: 0px;
+    position: relative;
+    top: 10px;
+    font-weight: normal;
+    font-size: 20px;
+    padding-bottom: 3px;
+    border-bottom: 2px #BB4545 solid;
+    width: 105px;
+}
+h3{
+    margin: 10px 0px;
+}
+h3 a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+h3 a:hover{
+    color: rgb(55, 95, 168);
+}
+#article-text{
+    width: 650px;
+    border-right: 1px rgb(182, 182, 182) solid;
+    margin-top: 50px;
+    float: left;
+}
+#main-article-image{
+    width: 390px;
+}
+#article-summary{
+    width: 250px;
+    float: left;
+}
+.clock-image{
+    height: 17px;
+    position: relative;
+    top: 2px;
+}
+#article-summary hr{
+    width: 50px;
+    border-top: 1px #BB4545 solid;
+}
+.date{
+    padding-right: 9px;
+    border-right: 1px rgb(182, 182, 182) solid;
+}
+#article-summary a{
+    text-decoration: none;
+    
+}
+#article-summary a:hover{
+    color:  rgb(55, 95, 168);
+}
+.topic-link{
+    color: #BB4545;
+}
+.article-link{
+    color: black;
+}
+#watch-listen{
+    width: auto;
+    height: auto;
+    float: left;
+}
+#watch-listen{
+    margin-left: 30px;
+    width: 319px;
+}
+#watch-listen h4{
+    padding-top: 30px;
+    font-weight: normal;
+    font-size: 22px;
+    margin: 25px 0px;
+}
+.watch-list-article-prev{
+    margin-bottom: 20px;
+}
+.watch-list-article-prev-text{
+    float: right;
+    width: 199px;
+    position: relative;
+    top: -16px;
+}
+.article-images-small{
+    width: 110px;
+    padding-right: 10px;
+    float: left;
+
+}        
+.watch-listen-links{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+#watch-listen a{
+    text-decoration: none;
+}
+#watch-listen a:hover{
+    color:  rgb(55, 95, 168);
+}

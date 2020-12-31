@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <style type="text/css">
+        .circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            float: left;
+            margin: 50px;
+        }
+        #black{
+            background-color: black;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        </style>
+
+    </head>
+    <body>
+        <div class="circle" id="black">
+        </div>
+        <div class="circle" id="red">
+        </div>
+        <div class="circle" id="blue">
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("black").onclick = function(){
+                document.getElementById("black").style.display = "none"
+            }
+            document.getElementById("red").onclick = function(){
+                document.getElementById("red").style.display = "none"
+            }
+            document.getElementById("blue").onclick = function(){
+                document.getElementById("blue").style.display = "none"
+            }
+
+        </script>
+
+    </body>
+</html>

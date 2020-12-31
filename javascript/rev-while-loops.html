@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <p>Let me guess how many fingers are you holding up? </p>
+        <input type="text" id="myFingers">
+        <input type="button" value="Guess!" id="guess">
+
+        <script type="text/javascript">
+            document.getElementById("guess").onclick = function () {
+                var myValue = document.getElementById("myFingers").value;
+                var i=1;
+                var gotIt = false;
+                    if (myValue == (0 || 1 || 2 || 3 || 4 || 5)){
+                        while (gotIt == false) {
+                            var randomNumber = Math.floor(Math.random() * 6);
+                            if(myValue==randomNumber){
+                                gotIt = true;
+                                alert ("To była liczba " + randomNumber + " trafiłem za " + i + " razem");
+                            }
+                            else{
+                                i++
+                            }
+                        }
+                    }
+                    else {
+                        alert ("Wprowadz inną liczbę");
+                    }
+            }
+
+      	</script>
+
+    </body>
+</html>

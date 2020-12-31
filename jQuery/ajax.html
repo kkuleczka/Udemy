@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>AJAX</title>
+        <script src="jquery-2.2.0.js"></script>
+
+        <style>
+ 
+
+        </style>
+    </head>
+
+    <body>
+        <p></p>
+        
+        <script type="text/javascript">
+            $.ajax("info.txt")
+                .done(function(data){
+                    $("p").html(data);
+                })
+                .fail(function(){
+                    alert("Could not get data");
+                });
+
+
+        </script>
+
+
+    </body> 
+
+
+</html>

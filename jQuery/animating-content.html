@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-2.2.0.js"></script>
+
+        <style>
+            .circle{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color:green;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        
+        <script type="text/javascript">
+            $("#circle1").click(function(){
+                $("#circle1").animate({
+                    width:"400px", 
+                    height:"400px",
+                    marginLeft:"100px",
+                    marginTop:"50px",
+                    borderRadius:"2%",
+                    backgroundColor:"rgb(5, 4, 4)",
+                },2000);
+
+            });
+
+            $("#circle2").click(function(){
+                $("#circle2").animate({
+                    width:"400px", 
+                    height:"700px",
+                    marginLeft:"100px",
+                    marginTop:"50px"
+                },2000, function(){
+                    $("#circle2").css("background-color", "red");
+                });
+
+            });
+
+
+
+        </script>
+
+
+    </body> 
+
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+
+            <input type="text" placeholder="Tu wpisz" id="textInput">
+            <!-- <input type="button" value="Change the text"> -->
+            <button id="buttonChange">Kliknij by zmienć</button>
+
+
+        <p id="paragraphText">Texxxxxt htiduhk </p>
+
+        <script type="text/javascript">
+
+            document.getElementById("buttonChange").onclick = function(){
+                var textEntered = "";
+                textEntered = document.getElementById("textInput").value;
+                document.getElementById("paragraphText").innerHTML = textEntered;
+            }
+
+        var name = "Rob";
+        </script>
+
+    </body>
+</html>

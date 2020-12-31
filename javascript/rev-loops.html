@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+    	<div id="tweetDiv"> </div>
+        <script type="text/javascript">
+            
+            var tweet = ["tweet1", "tweet2", "tweet3", "tweet4"];
+            var tweetString = "";
+            var i=0;
+            while (i<tweet.length) {
+                tweetString = tweetString + "<p>" + tweet[i] + "</p>";
+                i++
+
+            }
+                document.getElementById("tweetDiv").innerHTML = tweetString;
+
+      	</script>
+
+    </body>
+</html>

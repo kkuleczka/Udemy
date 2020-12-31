@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="jquery-2.2.0.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+
+        <style>
+            #draggable { 
+                width: 150px; 
+                height: 150px; 
+                padding: 0.5em; 
+            }
+
+            #containment-wrapper { 
+                width: 95%; 
+                height:150px; 
+                border:2px solid #ccc; 
+                padding: 10px; 
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            $( function() {
+                $("#draggable").draggable({
+                    axis: "x"
+                });
+                $("#draggable-in-box").draggable({ 
+                    containment: "#containment-wrapper", scroll: false 
+                });
+            } );
+            
+
+        </script>
+        
+        <div id="draggable" class="ui-widget-content">
+            <p>Drag me horizontaly</p>
+        </div>
+        <div id="containment-wrapper">
+                <span id="draggable-in-box" class="draggable ui-widget-content">I am stuck in the box</span>
+
+        </div>
+        
+
+
+    </body> 
+
+
+</html>

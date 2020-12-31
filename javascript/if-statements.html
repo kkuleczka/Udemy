@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <p>What is the name of your company?</p>
+        <input id="guess" type="text" placeholder="type here">
+        <button id="checkbutton">Check</button>
+
+        <script type="text/javascript">
+            document.getElementById("checkbutton").onclick = function() {
+                var guessEntered = document.getElementById ("guess").value ;
+                var correctGuess = "pergamonmed";
+                
+                if (guessEntered == correctGuess){
+                    alert("Zgadłeś");
+                } 
+                else {
+                    alert ("Ale lamus phiii...");
+            }
+                }
+
+
+
+        </script>
+
+    </body>
+</html>
