@@ -13,10 +13,29 @@
             }
 
             #containment-wrapper { 
-                width: 95%; 
+                width: 85%; 
                 height:150px; 
                 border:2px solid #ccc; 
                 padding: 10px; 
+            }
+
+            #resizable {
+                background-position: top left;
+            }
+
+            #resizable, #also{ 
+                width: 150px; 
+                height: 150px; 
+                padding: 0.5em; 
+            }
+
+            #resizable h3, #also h3 { 
+            text-align: center; 
+            margin: 0;
+            }
+
+            #also {
+                margin-top: 1em;
             }
 
         </style>
@@ -31,6 +50,16 @@
                 $("#draggable-in-box").draggable({ 
                     containment: "#containment-wrapper", scroll: false 
                 });
+                $("#resizable" ).resizable({
+                    grid:50, alsoResize: "#also", 
+                    //bez grid działa płynnie
+                    resize: function(event, ui){
+                        if ($("#resizable").width() > 300) {
+                            alert("Starczy !");
+                        }
+                    }
+                });
+                $( "#also" ).resizable();
             } );
             
 
@@ -41,7 +70,12 @@
         </div>
         <div id="containment-wrapper">
                 <span id="draggable-in-box" class="draggable ui-widget-content">I am stuck in the box</span>
-
+        </div>
+        <div id="resizable" class="ui-widget-content">
+            <h3 class="ui-state-active">Resizable</h3>
+        </div>
+        <div id="also" class="ui-widget-content">
+            <h3 class="ui-state-active">I will be also resized</h3>
         </div>
         
 
