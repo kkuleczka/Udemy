@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Code PLayer</title>
+        <script src="jquery-2.2.0.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+
+        <style>
+            body{
+            margin:0;
+            padding: 0%;
+            font-family: Helvetica,Arial,sans-serif;
+            }
+
+            #header{
+                background-color: rgb(199, 199, 199);
+                height: 38px;
+                width: 100%;
+            }
+
+            #logo{
+                font-size: 20px;
+                font-weight: bold;
+                padding: 6px;
+                float: left;
+            }
+
+            #buttonsContainer{
+                margin: 0 auto;
+                width: 246px;
+                height: 38px;
+                font-weight: bold;
+            }
+
+            .toggleButton{
+                margin: 4px 0px;
+                padding: 5px 3px;
+                border: 1px solid rgb(134, 134, 134);
+                border-right: none;
+                float: left;
+            }
+
+            #html {
+                border-top-left-radius:5px;
+                border-bottom-left-radius:5px;
+            }
+
+            #output {
+                border-right: 1px solid rgb(134, 134, 134);
+                border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+            }
+
+            .active {
+                background-color: rgb(208, 224, 231);
+            }
+
+            .highlitedButton{
+                background-color: rgb(174, 174, 174);
+            }
+
+            textarea {
+                resize: none;
+            }
+
+            .panel {
+                float: left;
+                width: 50%;
+                padding: 0px;
+                border: solid 1px gray;
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="logo">
+                Code Player
+            </div>
+            <div id="buttonsContainer">
+                <div class="toggleButton active" id="html">HTML</div>
+                <div class="toggleButton" id="css">CSS</div>
+                <div class="toggleButton" id="js">JavaScript</div>
+                <div class="toggleButton active" id="output">Output</div>
+            </div>
+        </div>
+        <div id="bodyCointainer">
+            <textarea id="htmlPanel" class="panel"><h1 id="123">Html</h1></textarea>
+            <textarea id="cssPanel" class="panel hidden">h1 { color: green; }</textarea>
+            <textarea id="jsPanel" class="panel hidden">document.getElementById("123").innerHTML = "Hello Rob";</textarea>
+            <iframe id="outputPanel" class="panel"></iframe>
+        </div>
+        <script type="text/javascript">
+            function updateOutput() {
+                $("iframe").contents().find("html").html("<html><head><style type='text/css'>"+ $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+                document.getElementById("outputPanel").contentWindow.eval($("#jsPanel").val());
+            }
+            $(".toggleButton").hover(function(){
+                $(this).addClass("highlitedButton")
+            }, function(){
+                $(this).removeClass("highlitedButton")
+            });
+
+            $(".toggleButton").click(function() {
+                $(this).toggleClass("active");
+                $(this).toggleClass("highlitedButton");
+                var panelID = $(this).attr("id") + "Panel";
+                $("#" + panelID).toggleClass("hidden");
+                var numberOfActPanels = 4 - $('.hidden').length;
+
+                $(".panel").width(($(window).width() / numberOfActPanels)-2);
+            });
+            $(".panel").height($(window).height() - $("#header").height());
+            $(".panel").width(($(window).width() / 2)-2);
+
+            $("iframe").contents().find("html").html($("#htmlPanel").val());
+            updateOutput();
+
+            $("textarea").on('change keyup paste', function(){
+                updateOutput();
+                //upating 
+            });
+        </script>
+    </body> 
+
+
+</html>
